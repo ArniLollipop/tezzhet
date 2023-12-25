@@ -10,6 +10,7 @@
     </header>
     <MainWarning v-if="weather?.is_weather" :icon="weather?.icon" />
     <MainBanner :banners="banners?.results || []" />
+    <UIButton> Продолжить </UIButton>
   </div>
 </template>
 

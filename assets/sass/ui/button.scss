@@ -1,0 +1,50 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 17px 0;
+    gap: 8px;
+    border-radius: 50px;
+    transition: 0.2s;
+    cursor: pointer;
+    background: $main-purple;
+
+    &-square {
+        background: white;
+        border-radius: 7px;
+        border: 0.5px solid rgba(0, 0, 0, 0.04);
+        display: inline-flex;
+        padding: 14px 58px;
+        box-shadow:
+            0px 3px 1px 0px rgba(0, 0, 0, 0.04),
+            0px 3px 8px 0px rgba(0, 0, 0, 0.12);
+        .button-text {
+            color: #3d3e4f;
+        }
+    }
+
+    &-gray {
+        background: #e9eaeb;
+        color: black;
+
+        .button-text {
+            color: #494e58;
+        }
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+
+    &:disabled {
+        background: #d0d5dd;
+        box-shadow: none;
+        color: #ffffff;
+        cursor: no-drop;
+    }
+
+    &-text {
+        width: max-content;
+        color: white;
+    }
+}
