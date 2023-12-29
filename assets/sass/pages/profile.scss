@@ -1,0 +1,247 @@
+.profile {
+  margin-top: 25px;
+  &-error {
+    margin-top: 10px;
+    color: darkred;
+    text-align: center;
+  }
+  &-hello {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    color: #292d35;
+  }
+  &-avatar {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    background: #c0a2ff;
+    & p {
+      font-family: "Nunito";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 28px;
+      /* identical to box height, or 112% */
+
+      color: #292d35;
+    }
+  }
+  &-bonus {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    & svg,
+    path {
+      height: 17px;
+      width: 17px;
+    }
+    & p {
+      font-family: "Nunito";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #22242f;
+    }
+  }
+  &-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #e3e8eb;
+    transition: all;
+    transition-duration: 200ms;
+    &__delete {
+      color: #fe4141;
+      text-align: center;
+      font-family: Nunito;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 19px;
+      border-bottom: 0;
+      padding: 10px 0;
+      cursor: pointer;
+    }
+    &__leave {
+      display: block;
+      margin: 0 auto;
+      margin-top: 20px;
+      color: #47a4e7;
+      text-align: center;
+      font-family: Nunito;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 19px;
+      padding: 10px 0;
+      border-bottom: 0;
+      cursor: pointer;
+    }
+    & p {
+      font-family: "Nunito";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #22242f;
+    }
+    & svg,
+    path {
+      height: 24px;
+      width: 24px;
+    }
+    &:active {
+      background: #e3e8eb;
+    }
+  }
+  &-address {
+    &__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      background: #8f64eb;
+      border-radius: 20px;
+      padding: 7px 15px;
+      width: fit-content;
+      margin: 0 auto;
+      font-family: "Nunito";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      color: #ffffff;
+      & svg,
+      path {
+        stroke: white;
+      }
+    }
+    &__one {
+      padding: 25px 0;
+      border-bottom: 1px solid #e3e8eb;
+      & p {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+        color: #292d35;
+      }
+    }
+    &__flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      & svg,
+      path {
+        width: 24px;
+        height: 20px;
+        stroke: #8f64eb;
+      }
+      & p {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+        color: #292d35;
+      }
+      & input {
+        display: none;
+      }
+      & input[type="radio"] + label {
+        font-family: "Nunito";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+        color: #292d35;
+        position: relative;
+      }
+      & input[type="radio"] + label::after {
+        content: "";
+        width: 13px;
+        height: 13px;
+        border: 1px solid #373b49;
+        border-radius: 50%;
+        position: absolute;
+        right: -25px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all;
+        transition-duration: 300ms;
+      }
+      & input[type="radio"]:checked + label::after {
+        background: #8f64eb;
+        border-color: #8f64eb;
+      }
+    }
+  }
+  &-cards {
+    &__btn {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: #8f64eb;
+      border-radius: 20px;
+      max-width: 65%;
+      justify-content: center;
+      margin: 10px auto;
+      padding: 8px;
+      font-family: "Nunito";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      color: #ffffff;
+      & svg,
+      path {
+        stroke: white;
+      }
+    }
+    &__flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+      &__small {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+    }
+    &__circle {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 5px;
+      & li {
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #8f64eb;
+      }
+    }
+    &__one {
+      background: #ffffff;
+      box-shadow: 0px 1px 3px 1px rgba(147, 157, 185, 0.35);
+      border-radius: 10px;
+      padding: 10px;
+      margin: 15px 0;
+    }
+  }
+}
