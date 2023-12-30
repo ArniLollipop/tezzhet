@@ -1,0 +1,75 @@
+.news {
+  &-list {
+    margin-top: 10px;
+    overflow-x: scroll;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 0;
+    width: 100%;
+    overflow-y: hidden;
+
+    &__box {
+      display: flex;
+      gap: 7px;
+    }
+    &__big {
+      width: 186px;
+      height: 266px;
+      border-radius: 3px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      &__img {
+        height: 202px;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    &__footer {
+      height: 64px;
+      background: #8f64eb;
+      backdrop-filter: blur(1px);
+      padding: 8px 4px;
+    }
+    &__line {
+      padding-bottom: 4px;
+      border-bottom: 0.5px solid #ffffff;
+    }
+    &__date {
+      font-family: "Nunito";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 10px;
+      color: #ffffff;
+      text-align: end;
+    }
+    &__text {
+      margin-top: 4px;
+      font-family: "Nunito";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 12px;
+      color: #ffffff;
+    }
+    &__smalls {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    &__small {
+      width: 186px;
+      height: 129px;
+      border-radius: 3px;
+      display: flex;
+      flex-direction: column;
+      &__img {
+        height: 65px;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+  }
+}

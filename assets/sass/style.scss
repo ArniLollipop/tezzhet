@@ -1,7 +1,6 @@
-/** @format */
 @import "./helpers/reset.scss";
-@import "./pages/main.scss";
-@import "./layouts/header.scss";
+@import "./main.scss";
+@import "./layouts/headers.scss";
 @import "./layouts/footer.scss";
 
 // ui
@@ -15,13 +14,19 @@
 
 body {
   font-family: "Nunito", sans-serif;
-  width: 100%;
+  width: 760px;
   //max-width: 500px;
   height: 100%;
   display: block;
   position: relative;
   margin: 0 auto;
   padding-bottom: 130px;
+}
+
+.relative {
+  width: 100%;
+  max-width: 760px;
+  position: relative;
 }
 
 .content-grid {
@@ -44,6 +49,7 @@ body {
 .content-grid > :not(.breakout, .full-width),
 .full-width > :not(.breakout, .full-width) {
   grid-column: content;
+  width: 100%;
 }
 
 .content-grid > .breakout {

@@ -49,7 +49,31 @@ export default defineNuxtConfig({
     ],
   },
 
-  modules: ["@pinia/nuxt", "nuxt-swiper"],
+  modules: [
+    "@pinia/nuxt",
+    "nuxt-swiper",
+    [
+      "@nuxtjs/i18n",
+      {
+        lazy: true,
+        langDir: "./locales/",
+        strategy: "no_prefix",
+        locales: [
+          {
+            name: "Русский",
+            code: "ru",
+            file: "ru",
+          },
+          {
+            name: "Қазақша",
+            code: "kz",
+            file: "kz",
+          },
+        ],
+        defaultLocale: "ru",
+      },
+    ],
+  ],
 
   css: ["@/assets/sass/style.scss"],
   vite: {
@@ -60,5 +84,8 @@ export default defineNuxtConfig({
         },
       },
     },
+  },
+  devServer: {
+    host: "0.0.0.0",
   },
 });

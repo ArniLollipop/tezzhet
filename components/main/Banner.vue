@@ -1,7 +1,5 @@
-<!-- @format -->
-
 <template>
-  <swiper
+  <Swiper
     :modules="[SwiperPagination]"
     :pagination="{
       clickable: true,
@@ -10,7 +8,7 @@
     class="main-slider"
     :loop="true"
   >
-    <swiper-slide v-for="banner in banners" :key="banner.id">
+    <SwiperSlide v-for="banner in banners" :key="banner.id">
       <div class="main-banner">
         <img :src="banner.image" alt="" class="main-banner__img" />
         <p class="main-banner__p">
@@ -20,12 +18,11 @@
           }}</span>
         </p>
       </div>
-    </swiper-slide>
-  </swiper>
+    </SwiperSlide>
+  </Swiper>
 </template>
 
 <script setup lang="ts">
-import type { IBanner } from "@/types/IMain";
 import "swiper/css/pagination";
 import "swiper/css";
 
