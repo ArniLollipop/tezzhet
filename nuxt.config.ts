@@ -52,6 +52,7 @@ export default defineNuxtConfig({
   modules: [
     "@pinia/nuxt",
     "nuxt-swiper",
+    "@nuxt/image",
     [
       "@nuxtjs/i18n",
       {
@@ -87,5 +88,18 @@ export default defineNuxtConfig({
   },
   devServer: {
     host: "0.0.0.0",
+  },
+  image: {
+    inject: true,
+    quality: 90,
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+      "2xl": 1536,
+    },
   },
 });

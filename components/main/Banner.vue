@@ -10,7 +10,7 @@
   >
     <SwiperSlide v-for="banner in banners" :key="banner.id">
       <div class="main-banner">
-        <img :src="banner.image" alt="" class="main-banner__img" />
+        <NuxtImg :src="banner.image" alt="" class="main-banner__img" />
         <p class="main-banner__p">
           {{ banner.title.split(" ")[0] }}
           <span class="main-banner__span">{{
