@@ -21,27 +21,21 @@
 </template>
 
 <script lang="ts" setup>
-const runtimeConfig = useRuntimeConfig();
-
 const { data: banners } = await useHttp<Pagination<IBanner>>(
-  `${runtimeConfig.public.baseUrl}main_page/banners/`
+  "main_page/banners/"
 );
 
-const { data: weather } = await useHttp<IWeather>(
-  `${runtimeConfig.public.baseUrl}main_page/weather_info/`
-);
+const { data: weather } = await useHttp<IWeather>("main_page/weather_info/");
 
 const { data: popularCats } = await useHttp<Pagination<ICategory>>(
-  `${runtimeConfig.public.baseUrl}category/popular_cats/`
+  "category/popular_cats/"
 );
 
 const { data: restaurants } = await useHttp<Pagination<IRestaurant>>(
-  `${runtimeConfig.public.baseUrl}catalog/restaurants`
+  "catalog/restaurants"
 );
 
-const { data: news } = await useHttp<Pagination<INews>>(
-  `${runtimeConfig.public.baseUrl}main_page/news`
-);
+const { data: news } = await useHttp<Pagination<INews>>("main_page/news");
 
 async function handleSearch(search: string) {
   console.log(search);
