@@ -10,7 +10,8 @@
       >
         <div class="main-popular__box">
           <div class="main-popular__circle">
-            <img
+            <NuxtImg
+              loading="lazy"
               :src="category?.category_image || ''"
               alt=""
               class="main-popular__img"
@@ -25,7 +26,7 @@
 
 <script setup lang="ts">
 const props = defineProps<{
-  categories: ICategory[] | [];
+  categories: ICategory[];
 }>();
 
 function handleSearch(category: ICategory) {

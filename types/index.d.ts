@@ -11,7 +11,7 @@ export declare global {
     count: number;
     next: string | null;
     previous: string | null;
-    results: Some[];
+    results: Some[] | [];
   }
 
   interface IWeather {
@@ -49,5 +49,15 @@ export declare global {
     time_to: string;
     user: number;
     category: Pick<ICategory, "category_name">[];
+  }
+
+  interface INews {
+    date_published: string;
+    description: string;
+    description_kaz: string;
+    id: number;
+    image: string;
+    title: string;
+    title_kaz: string;
   }
 }

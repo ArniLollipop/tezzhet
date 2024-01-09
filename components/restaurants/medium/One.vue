@@ -3,13 +3,14 @@
     <div
       @click="
         restaurant.is_working &&
-          $router.push(`/category/restaurants/${restaurant.id}`)
+          navigateTo(`/category/restaurants/${restaurant.id}`)
       "
       class="medium-list__one"
     >
       <div v-if="!restaurant.is_working" class="not-active"></div>
       <div class="medium-list__head">
-        <img
+        <NuxtImg
+          loading="lazy"
           :src="restaurant.image"
           alt=""
           :class="

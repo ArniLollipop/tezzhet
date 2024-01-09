@@ -1,6 +1,8 @@
 <template>
   <div class="relative">
-    <slot />
+    <div class="">
+      <slot />
+    </div>
     <LayoutFooter />
   </div>
 </template>

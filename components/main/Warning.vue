@@ -1,8 +1,8 @@
 <template>
   <div class="main-warning">
     <IconInfo />
-    <p class="main-warning__text">"PossibleDeliveryDelays"</p>
-    <img :src="icon" alt="" />
+    <p class="main-warning__text">{{ $t("PossibleDeliveryDelays") }}</p>
+    <NuxtImg loading="lazy" :src="props?.icon" alt="" />
   </div>
 </template>
 
