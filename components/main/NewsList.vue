@@ -2,8 +2,8 @@
   <section class="news">
     <h2 v-if="news?.length > 0">{{ $t("news") }}</h2>
     <div class="news-list">
-      <div class="news-list__box" v-for="item in news" :key="item.id">
-        <div class="news-list__big" @click="navigateTo(`/news/${item.id}`)">
+      <div class="news-list__box" v-for="item in props.news" :key="item.id">
+        <div class="news-list__big" @click="handleRouteNews(item.id)">
           <NuxtImg
             loading="lazy"
             :src="item.image"
@@ -17,7 +17,7 @@
               </p>
             </div>
             <p class="news-list__text">
-              {{ item.description.slice(0, 70) }}...
+              {{ item.title }}
             </p>
           </div>
         </div>
@@ -30,4 +30,8 @@
 const props = defineProps<{
   news: INews[];
 }>();
+
+async function handleRouteNews(id: number) {
+  await navigateTo(`/news/${id}`);
+}
 </script>

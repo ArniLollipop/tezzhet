@@ -3,7 +3,7 @@
     <header class="header content-grid">
       <div class="header-main">
         <IconLogo />
-        <button @click="navigateTo('/about')">
+        <button>
           <IconBell />
         </button>
       </div>
@@ -22,7 +22,10 @@
 
 <script lang="ts" setup>
 const { data: banners } = await useHttp<Pagination<IBanner>>(
-  "main_page/banners/"
+  "main_page/banners/",
+  {
+    key: "banners",
+  }
 );
 
 const { data: weather } = await useHttp<IWeather>("main_page/weather_info/");
@@ -35,7 +38,9 @@ const { data: restaurants } = await useHttp<Pagination<IRestaurant>>(
   "catalog/restaurants"
 );
 
-const { data: news } = await useHttp<Pagination<INews>>("main_page/news");
+const { data: news } = await useHttp<Pagination<INews>>("main_page/news", {
+  key: "news",
+});
 
 async function handleSearch(search: string) {
   console.log(search);

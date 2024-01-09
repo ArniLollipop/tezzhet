@@ -8,7 +8,7 @@
     class="main-slider"
     :loop="true"
   >
-    <SwiperSlide v-for="banner in banners" :key="banner.id">
+    <SwiperSlide v-for="banner in props.banners" :key="banner.id">
       <div class="main-banner">
         <NuxtImg :src="banner.image" alt="" class="main-banner__img" />
         <p class="main-banner__p">

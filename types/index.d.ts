@@ -20,6 +20,7 @@ export declare global {
   }
 
   interface ICategory {
+    id: number;
     category_image: string | null;
     category_name: string | null;
     slug: string | null;

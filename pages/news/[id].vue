@@ -1,7 +1,7 @@
 <template>
   <header class="news-header">
     <div class="restaurants-header__flex">
-      <button @click="navigateTo('/')" class="restaurants-header__btn">
+      <button @click="handleRouteHome" class="restaurants-header__btn">
         <IconChevron class="rotate-90 -ml-2" />
       </button>
     </div>
@@ -46,4 +46,8 @@ const { data: news } = await useHttp("main_page/news", {
     };
   },
 });
+
+async function handleRouteHome() {
+  await navigateTo("/");
+}
 </script>

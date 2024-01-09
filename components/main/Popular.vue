@@ -29,8 +29,7 @@ const props = defineProps<{
   categories: ICategory[];
 }>();
 
-function handleSearch(category: ICategory) {
-  // localStorage.setItem("category", JSON.stringify(category));
-  navigateTo("/category/cat/" + category?.slug);
+async function handleSearch(category: ICategory) {
+  await navigateTo("/category/cat/" + category?.slug);
 }
 </script>
