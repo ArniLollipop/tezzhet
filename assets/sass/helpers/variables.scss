@@ -2,6 +2,7 @@
 $dark: #00050b;
 $white: #fff;
 $placeholder: "#67829a";
+$main-purple: #8f64eb;
 
 //mixins
 
@@ -17,24 +18,17 @@ $maxWidthContainer: 960;
     #{$property}: $startSize + px;
 
     @media (max-width: #{$maxWidthContainer + px}) {
-      #{$property}: calc(
-        #{$minSize + px} + #{$addSize} *
-          ((100vw - 320px) / #{$maxWidthContainer - 320})
-      );
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
     }
   } @else if $type==2 {
     // Только если больше контейнера
     #{$property}: $startSize + px;
 
     @media (min-width: #{$maxWidthContainer + px}) {
-      #{$property}: calc(
-        #{$minSize + px} #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320})
-      );
+      #{$property}: calc(#{$minSize + px} #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
     }
   } @else {
     // Всегда
-    #{$property}: calc(
-      #{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320})
-    );
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
   }
 }
