@@ -20,7 +20,7 @@ type useFetchType = typeof useFetch;
 // };
 
 export const useHttp: useFetchType = (url: string, options) => {
-  const runtimeConfig = useRuntimeConfig();
+	const runtimeConfig = useRuntimeConfig();
 
-  return useFetch(`${runtimeConfig.public.baseUrl}${url}`, options);
+	return useFetch(`${runtimeConfig.public.baseUrl}${url}`, options);
 };

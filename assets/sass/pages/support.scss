@@ -1,107 +1,107 @@
 .support {
-  margin: 15px 0;
-  &-block {
-    padding: 10px;
-    background: #ffffff;
-    box-shadow: 0px 1px 3px 1px rgba(147, 157, 185, 0.35);
-    border-radius: 10px;
-    &__select {
-      position: relative;
-      &__btn {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 15px;
-        background: #8f64eb;
-        border-radius: 10px;
+	margin: 15px 0;
+	&-block {
+		padding: 10px;
+		background: #ffffff;
+		box-shadow: 0px 1px 3px 1px rgba(147, 157, 185, 0.35);
+		border-radius: 10px;
+		&__select {
+			position: relative;
+			&__btn {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 10px 15px;
+				background: #8f64eb;
+				border-radius: 10px;
 
-        font-family: "Nunito";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 18px;
-        /* identical to box height, or 112% */
+				font-family: "Nunito";
+				font-style: normal;
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 18px;
+				/* identical to box height, or 112% */
 
-        color: #ffffff;
-        & svg,
-        path {
-          stroke: #ffffff;
-        }
-      }
-      &__options {
-        position: absolute;
-        top: 100%;
-        z-index: 10;
-        width: 100%;
-        box-shadow: 0px 2px 3px rgba(147, 157, 185, 0.35);
-        border-radius: 10px;
-        overflow: hidden;
-      }
-      &__option {
-        padding: 10px 15px;
-        background: white;
-        width: 100%;
-        border-bottom: 1px solid #e3e8eb;
-        font-family: "Nunito";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 13px;
-        line-height: 16px;
-        color: #8b8d90;
-        height: fit-content;
-        &:last-child {
-          border: none;
-        }
-      }
-    }
-    &__textarea {
-      margin: 10px 0;
-      max-width: 100%;
-      width: 100%;
-      max-height: 100%;
-      padding: 10px 15px;
-      border: none;
-      outline: none;
-      background: #f4f4f4;
-      border-radius: 10px;
-      &::placeholder {
-        font-family: "Nunito";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 18px;
-        color: #8b8d91;
-      }
-      font-family: "Nunito";
-      font-style: normal;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 18px;
-      color: #22242f;
-    }
-    &__btn {
-      width: fit-content;
-      margin: 15px auto;
-      display: block;
-      padding: 10px 20px;
-      background: #8f64eb;
-      border-radius: 20px;
-      font-family: "Nunito";
-      font-style: normal;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 19px;
-      text-align: center;
-      color: #ffffff;
-    }
-  }
+				color: #ffffff;
+				& svg,
+				path {
+					stroke: #ffffff;
+				}
+			}
+			&__options {
+				position: absolute;
+				top: 100%;
+				z-index: 10;
+				width: 100%;
+				box-shadow: 0px 2px 3px rgba(147, 157, 185, 0.35);
+				border-radius: 10px;
+				overflow: hidden;
+			}
+			&__option {
+				padding: 10px 15px;
+				background: white;
+				width: 100%;
+				border-bottom: 1px solid #e3e8eb;
+				font-family: "Nunito";
+				font-style: normal;
+				font-weight: 500;
+				font-size: 13px;
+				line-height: 16px;
+				color: #8b8d90;
+				height: fit-content;
+				&:last-child {
+					border: none;
+				}
+			}
+		}
+		&__textarea {
+			margin: 10px 0;
+			max-width: 100%;
+			width: 100%;
+			max-height: 100%;
+			padding: 10px 15px;
+			border: none;
+			outline: none;
+			background: #f4f4f4;
+			border-radius: 10px;
+			&::placeholder {
+				font-family: "Nunito";
+				font-style: normal;
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 18px;
+				color: #8b8d91;
+			}
+			font-family: "Nunito";
+			font-style: normal;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 18px;
+			color: #22242f;
+		}
+		&__btn {
+			width: fit-content;
+			margin: 15px auto;
+			display: block;
+			padding: 10px 20px;
+			background: #8f64eb;
+			border-radius: 20px;
+			font-family: "Nunito";
+			font-style: normal;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 19px;
+			text-align: center;
+			color: #ffffff;
+		}
+	}
 }
 
 @keyframes select {
-  0% {
-    padding: 0px 15px;
-  }
-  100% {
-    padding: 10px 15px;
-  }
+	0% {
+		padding: 0px 15px;
+	}
+	100% {
+		padding: 10px 15px;
+	}
 }

@@ -1,8 +1,8 @@
 <template>
-  <div class="relative">
-    <div class="">
-      <slot />
-    </div>
-    <LayoutFooter />
-  </div>
+	<div class="relative">
+		<div class="">
+			<slot />
+		</div>
+		<LayoutFooter />
+	</div>
 </template>

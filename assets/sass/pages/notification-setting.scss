@@ -1,47 +1,47 @@
 .notification-setting {
-  margin: 15px 0;
-  &__flex {
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
-    & input[type="checkbox"] + label {
-      width: 37px;
-      height: 22px;
-      border-radius: 50px;
-      background: #d3dadc;
-      transition: all;
-      transition-duration: 300ms;
-      position: relative;
-    }
+	margin: 15px 0;
+	&__flex {
+		display: flex;
+		align-content: center;
+		justify-content: space-between;
+		& input[type="checkbox"] + label {
+			width: 37px;
+			height: 22px;
+			border-radius: 50px;
+			background: #d3dadc;
+			transition: all;
+			transition-duration: 300ms;
+			position: relative;
+		}
 
-    & input[type="checkbox"]:checked + label {
-      background: #8f64eb;
-    }
+		& input[type="checkbox"]:checked + label {
+			background: #8f64eb;
+		}
 
-    & input[type="checkbox"] + label::after {
-      content: "";
-      height: 17px;
-      width: 17px;
-      border-radius: 50%;
-      background: white;
-      position: absolute;
-      top: 50%;
-      right: 45%;
-      transform: translateY(-50%);
-      transition: all;
-      transition-duration: 200ms;
-    }
+		& input[type="checkbox"] + label::after {
+			content: "";
+			height: 17px;
+			width: 17px;
+			border-radius: 50%;
+			background: white;
+			position: absolute;
+			top: 50%;
+			right: 45%;
+			transform: translateY(-50%);
+			transition: all;
+			transition-duration: 200ms;
+		}
 
-    & input[type="checkbox"]:checked + label::after {
-      right: 4px !important;
-    }
-  }
-  &__text {
-    font-family: "Nunito";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    color: #22242f;
-  }
+		& input[type="checkbox"]:checked + label::after {
+			right: 4px !important;
+		}
+	}
+	&__text {
+		font-family: "Nunito";
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 19px;
+		color: #22242f;
+	}
 }

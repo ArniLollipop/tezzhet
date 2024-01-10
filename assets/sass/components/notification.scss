@@ -1,61 +1,60 @@
 .notification {
-    display: flex;
-    align-items: center;
-    height: 60px;
-    justify-content: space-around;
-    &-btm {
-        border-bottom: 0.8px solid #C8D3E7;
-    }
-    &-content {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        justify-content: space-between;
-        &__logo {
-            padding: 5px 9px 5px 8px;
-            border-radius: 50%; 
-            background-color: white; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            stroke-width: 1.5px;
-            box-shadow: 0 0 5px #8F64EB;
-        }
-        &__text {
-            display: flex;
-            flex-direction: column;
-            gap: 3px;
-            h6 {
-                color: #25272E;
-                font-family: Nunito;
-                font-size: 11px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 13px;
-            }
-            p {
-                color: #25272E;
-                font-family: Nunito;
-                font-size: 11px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 13px;
-            }   
-        }
-        &__right {
-            display: flex;
-            flex-direction: column;
-            gap: 3px;
-            align-items: flex-end;
-            span {
-                color: #9095A7;
-                font-family: Nunito;
-                font-size: 11px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 13px;
-            }
-        }
-    }
-
+	display: flex;
+	align-items: center;
+	height: 60px;
+	justify-content: space-around;
+	&-btm {
+		border-bottom: 0.8px solid #c8d3e7;
+	}
+	&-content {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		justify-content: space-between;
+		&__logo {
+			padding: 5px 9px 5px 8px;
+			border-radius: 50%;
+			background-color: white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			stroke-width: 1.5px;
+			box-shadow: 0 0 5px #8f64eb;
+		}
+		&__text {
+			display: flex;
+			flex-direction: column;
+			gap: 3px;
+			h6 {
+				color: #25272e;
+				font-family: Nunito;
+				font-size: 11px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 13px;
+			}
+			p {
+				color: #25272e;
+				font-family: Nunito;
+				font-size: 11px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 13px;
+			}
+		}
+		&__right {
+			display: flex;
+			flex-direction: column;
+			gap: 3px;
+			align-items: flex-end;
+			span {
+				color: #9095a7;
+				font-family: Nunito;
+				font-size: 11px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 13px;
+			}
+		}
+	}
 }

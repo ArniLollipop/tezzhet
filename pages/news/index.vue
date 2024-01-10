@@ -1,3 +1,5 @@
 <template>
-  <div>asdasdasdasd</div>
+	<div></div>
 </template>
+
+<script setup lang="ts"></script>
