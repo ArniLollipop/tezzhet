@@ -1,3 +1,5 @@
+# This is an old WebView project that was written on Vue 2, I am rewriting it on Nuxt 3
+
 # Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
