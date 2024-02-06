@@ -33,19 +33,14 @@
 </template>
 
 <script lang="ts" setup>
-const { data: banners } = await useHttp<Pagination<IBanner>>("main_page/banners/", {
-	key: "banners",
-});
+const { $http } = useNuxtApp();
 
-const { data: weather } = await useHttp<IWeather>("main_page/weather_info/");
+const { data: banners } = await useAsyncData<Pagination<IBanner>>("banners", () => $http("main_page/banners/"));
 
-const { data: popularCats } = await useHttp<Pagination<ICategory>>("category/popular_cats/");
-
-const { data: restaurants } = await useHttp<Pagination<IRestaurant>>("catalog/restaurants");
-
-const { data: news } = await useHttp<Pagination<INews>>("main_page/news", {
-	key: "news",
-});
+const { data: weather } = await useAsyncData<IWeather>("weather", () => $http("main_page/weather_info/"));
+const { data: popularCats } = await useAsyncData<Pagination<ICategory>>("popularCats", () => $http("category/popular_cats/"));
+const { data: restaurants } = await useAsyncData<Pagination<IRestaurant>>("restaurants", () => $http("catalog/restaurants"));
+const { data: news } = await useAsyncData<Pagination<INews>>("news", () => $http("main_page/news"));
 
 function handleSearch(search: string) {
 	console.log(search);

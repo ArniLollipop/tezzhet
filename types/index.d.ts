@@ -1,4 +1,11 @@
 export declare global {
+	interface IUser {
+		id: number;
+		role: number;
+		username: string;
+		access: string;
+		refresh: string;
+	}
 	interface IBanner {
 		id: number;
 		title: string;

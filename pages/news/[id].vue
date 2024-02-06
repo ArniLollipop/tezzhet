@@ -36,13 +36,14 @@
 </template>
 
 <script setup lang="ts">
+const { $http } = useNuxtApp();
+
 const route = useRoute();
 
-const { data: newsDetails } = await useHttp<INews>(`main_page/news/${route.params.id}/`);
+const { data: newsDetails } = await useAsyncData<INews>(`news-${route.params.id}`, () => $http(`main_page/news/${route.params.id}/`));
 
-const { data: news } = await useHttp("main_page/news", {
-	key: "news",
-	transform(data: Pagination<INews>) {
+const { data: news } = await useAsyncData<Pagination<INews>>("news", () => $http("main_page/news/"), {
+	transform(data) {
 		return {
 			...data,
 			results: data.results?.filter((item) => {

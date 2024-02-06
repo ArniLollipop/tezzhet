@@ -23,10 +23,9 @@
 </template>
 
 <script setup lang="ts">
-const { data: categories } = await useHttp<Pagination<ICategory>>("category/rest_cats");
-// const { data: restaurants } = await useHttp<Pagination<IRestaurant>>(
-//   "catalog/restaurants"
-// );
+const { $http } = useNuxtApp();
+
+const { data: categories } = await useAsyncData<Pagination<ICategory>>("categories", () => $http("category/rest_cats"));
 
 async function handleRouteHome() {
 	await navigateTo("/");
